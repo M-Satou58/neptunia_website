@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<div class="container mt-3" style="width:70%;">
+	<h1 class="display-5">Contact Me</h1>
+<form method="POST">
+	{% csrf_token %}
+	<div class="mb-3">
+	  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+	  {{form.email}}
+	</div>
+
+	<div class="mb-3">
+	  <label for="exampleFormControlInput1" class="form-label">Subject</label>
+	  {{form.subject}}
+	</div>
+
+	<div class="mb-3">
+	  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+	  {{form.message}}
+	</div>
+
+	<button type="submit" class="btn btn-primary" style="width:100%;">Send Mail</button>
+</form>
+
+{% endblock %}

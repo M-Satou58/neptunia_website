@@ -1,0 +1,244 @@
+
+{% extends 'base.html' %}
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{% load static %}
+<style>
+	@font-face{
+		font-family: gamindustri;
+		src: url("{% static 'fonts/gamindustri.ttf'%}");
+	}
+	body{
+		font-family: Arial, Helvetica, sans-serif;
+		text-transform: uppercase;
+		background-image: url('{% static "images/bg/bg_home.jpg" %}');
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	h1, h3{
+		font-family: gamindustri;
+		
+	}
+
+	h1{
+		font-size: 35px;
+	}
+
+	h3{
+		font-size: 30px;
+	}
+
+	nav {
+		width: 70%;
+		height: 50px;
+		margin: 20px 20px 0 20px;
+	}
+
+	nav ul{
+		margin: 10px 5px 0 5px;
+	}
+
+	nav ul li{
+		display: inline-flex;
+		flex-wrap: wrap;
+	}
+
+	.container{
+		width: 35%;
+		margin-left: 100px;
+		margin-top: 100px;
+	}
+
+	.name_container h3 {
+	}
+
+	.text_container{
+		margin-bottom: 30px;
+		
+	}
+
+	.btn_container a{
+		width: 200px;
+		font-size: 20px;
+		color: white;
+		border: 2px dotted purple;
+		padding: 10px;
+		border-radius: 25px;
+		text-decoration: none;
+		font-weight: bold;
+		background-color: purple;
+		padding: 7px 20px 7px 20px;
+		margin-top: 20px;
+		box-shadow: 0 8px 8px 0 rgba(201,38,242,0.5);
+	}
+
+	.img_container{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 35%;
+		right: 0;
+		overflow: hidden;
+	}
+
+
+
+	nav ul li img{
+		width: 80px;
+		height: 80px;
+	}
+
+	.link{
+		display: inline-flex;
+	}
+
+
+	@-webkit-keyframes swing {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes swing {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+	.link a:hover,img:hover{
+		-webkit-animation: swing 1s ease;
+	    animation: swing 1s ease;
+	    -webkit-animation-iteration-count: 1;
+	    animation-iteration-count: 1;
+	}	
+
+
+
+	.link a{
+		margin-top: 25px;
+		margin-bottom: 50px;
+		margin-right: 30px;
+		text-decoration: none;
+		width: 95px;
+		text-align: center;
+		font-size: 15px;
+		padding: 5px 5px 5px 5px;
+		color: white;
+		border-radius: 5px;
+		font-weight: bold;
+		transition: 0.3;
+		min-width: 85px;
+	}
+
+	.img_container img{
+		margin-top: 20px;
+		width: 90%;
+	}
+
+	.img_container a{
+		cursor: default;
+	}
+
+	.img_container img:hover{
+		-webkit-animation: swing 1s ease;
+		animation: swing 1s ease;
+		-webkit-animation-iteration-count: 1;
+		animation-iteration-count: 1;
+		
+	}
+</style>
+
+<nav>
+	<ul>
+		<li>
+			<div class="link">
+				<img src="{% static 'images/chibi/chibi_purple_heart.png'%}">
+				<a href="{%url 'about'%}" style="background-color: rgb(201, 38, 242); box-shadow: 0 8px 8px 0 rgba(201,38,242,0.5);">About</a>
+			</div>
+
+			<div class="link">
+				<img src="{% static 'images/chibi/chibi_black_heart.png'%}">
+				<a href="{%url 'blog'%}" style="background-color: rgb(68, 68, 68); box-shadow: 0 8px 8px 0 rgba(68,68,68,0.5);">Blog</a>
+			</div>
+
+			<div class="link">
+				<img src="{% static 'images/chibi/chibi_white_heart.png'%}">
+				<a href="" style="background-color: rgb(39, 214, 249); box-shadow: 0 8px 8px 0 rgba(39,214,249,0.5);">Gallery</a>
+			</div>
+
+			<div class="link">
+				<img src="{% static 'images/chibi/chibi_green_heart.png'%}">
+				<a href="{% url 'contacts' %}" style="background-color: rgb(78, 242, 38); box-shadow: 0 8px 8px 0 rgba(78,242,38,0.5);">Contacts</a>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+<div class="container">
+	<div class="name_container">
+		<h1>Kyle Pagayon</h1>
+		<h3>Web & App Frontend/Backend Developer</h3>
+	</div>
+	
+	<div class="text_container">
+		<p>Hi, I'm Kyle. This is my portfolio site showing what I can
+		do as a Frontend & Backend Developer. So if you're intrigued by
+	any of my work or have any questions be sure to contact me.</p>
+	</div>
+
+	<div class="btn_container">
+		<a href="">Learn More</a>
+	</div>
+</div>
+
+<div class="img_container">
+	<a href="{% url 'secret' %}"><img src="{% static 'images/chr/school_nepgear.png' %}"></a>
+</div>
+
+{% endblock %}

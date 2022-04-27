@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+{% load static %}
+<style type="text/css">
+	body{
+		margin: 0;
+		width: 100%;
+		font-family: Arial, Helvetica, sans-serif;
+		box-sizing: border-box;
+		background-image: url('{% static "images/bg/bg_home.jpg" %}');
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.container{
+		width: 60%;
+		height: auto;
+		display: inline-block;
+		border-radius: 10px;
+		margin-top: 10px;
+		box-shadow: 0 5px 5px 0 rgba(68,68,68,0.5);
+		text-align: center;
+  		position: absolute;
+  		overflow: hidden;
+		left: 50%;
+		transform: translate(-50%);
+		background-color: white;
+	}
+
+	.container img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.container p{
+		padding: 5px 30px 0 30px;
+		text-align: center;
+
+	}
+
+	h2{
+		color: purple;
+	}
+
+</style>
+
+<div class="container">
+	<img src="{% static 'images/bg/bg_about.png' %}">
+	<h2>About</h2>
+
+	<p>Hyperdimension Neptunia is a role-playing game produced by Compile Heart with character designs done by Tsunako. The series takes place in a world known as a Gamindustri which parodies the real-life gaming industry. The franchise follows characters that act as the representations of gaming consoles, gaming companies, and even games themselves. </p>
+
+	<p>The first installment of the series premiered in Japan in 2010 for the PlayStation 3 and was soon localized by NIS America for markets in North America, Europe, and Australia. Since then, Hyperdimension Neptunia games have been subsequently localized and have produced games not only for the PlayStation 3, but also for the PlayStation 4, PlayStation Vita, PC and Nintendo Switch with a number of main series titles, spin-offs, and remakes. Aside from the console and handheld titles, the Hyperdimension Neptunia series is also present in the mobile market with five apps, one of them being a Mobile Card game, and even has an anime series and OVAs. </p>
+
+	<h2>Game Intro's</h2>
+
+	<div class="intros">
+		<h2>Hyperdimension Neptunia Re;birth 1</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZeLtKio2yMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<h2>Hyperdimension Neptunia Re;birth 2</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/HWaCJqHoZqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<h2>Hyperdimension Neptunia Re;birth 3</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/MV99uO8wmgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+{% endblock %}
