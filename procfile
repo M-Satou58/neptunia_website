@@ -1,0 +1,1 @@
+web: gunicorn neptunia_project.wsgi --log-file -
